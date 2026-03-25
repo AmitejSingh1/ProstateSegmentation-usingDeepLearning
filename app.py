@@ -18,9 +18,6 @@ from config import H, W, MODEL_PATH
 # Update expected model path to PyTorch .pth format
 PTH_MODEL_PATH = MODEL_PATH.replace('.keras', '.pth')
 
-# Add this URL after you upload the model.pth to a GitHub release
-MODEL_URL = "https://github.com/AmitejSingh1/ProstateSegmentation-usingDeepLearning/releases/download/v1.0/model.pth"
-
 # ---- Page Config ----
 st.set_page_config(
     page_title="Prostate Segmentation",
@@ -78,18 +75,6 @@ st.markdown("""
 @st.cache_resource
 def load_pytorch_model():
     """Load the trained PyTorch segmentation model (cached)."""
-    if not os.path.exists(PTH_MODEL_PATH):
-        # Try to download the model from GitHub Releases if we are on the cloud
-        try:
-            st.info(f"Downloading 98MB model weights from GitHub Release...")
-            # Make sure files directory exists
-            os.makedirs(os.path.dirname(PTH_MODEL_PATH), exist_ok=True)
-            torch.hub.download_url_to_file(MODEL_URL, PTH_MODEL_PATH)
-            st.success("Download complete!")
-        except Exception as e:
-            st.error(f"Failed to auto-download model: {e}")
-            return None, None
-            
     if not os.path.exists(PTH_MODEL_PATH):
         return None, None
         
