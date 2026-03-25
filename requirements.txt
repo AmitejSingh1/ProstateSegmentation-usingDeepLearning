@@ -1,6 +1,6 @@
 torch>=2.0.0
 torchvision>=0.15.0
-opencv-python>=4.6
+opencv-python-headless>=4.6
 numpy>=1.23
 pandas>=1.5
 scikit-learn>=1.1
