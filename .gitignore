@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+files/
+results/
+logs/
+data/
+Micro_Ultrasound_Prostate_Segmentation_Dataset/
+*.h5
+*.keras
+*.pth
+*.jpg
+*.jpeg
+*.png

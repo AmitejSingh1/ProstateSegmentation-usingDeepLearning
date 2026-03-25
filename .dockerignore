@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.gitignore
+*.md
+data/
+results/
+logs/
+*.csv
+.env
+Micro_Ultrasound_Prostate_Segmentation_Dataset/

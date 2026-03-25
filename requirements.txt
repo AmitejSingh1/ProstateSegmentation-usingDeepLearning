@@ -1,0 +1,11 @@
+torch>=2.0.0
+torchvision>=0.15.0
+opencv-python>=4.6
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.1
+streamlit>=1.28
+pydicom>=2.3
+SimpleITK>=2.2
+tqdm>=4.64
+Pillow>=9.2
